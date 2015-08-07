@@ -100,7 +100,7 @@ public class EnterActivity extends ActionBarActivity {
                                                case DIAL:
                                                    try {
                                                        Intent callIntent = new Intent(Intent.ACTION_CALL);
-                                                       callIntent.setData(Uri.parse(s));
+                                                       callIntent.setData(Uri.parse("tel:"+s));
                                                        startActivity(callIntent);
                                                    } catch (ActivityNotFoundException activityException) {
                                                        Log.e("DialOrSend", "Call failed", activityException);
